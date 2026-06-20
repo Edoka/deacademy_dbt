@@ -18,6 +18,10 @@ models:
     description: Customer DBT model
   - name: customer_vw
     description: Customer View model
+  - name: sales
+    description: Sales DBT model
+  - name: purchase
+    description: Purchase DBT model
 
 sources:
   - name: employeex
@@ -30,3 +34,15 @@ sources:
     schema: PUBLIC
     tables:
       - name: CUSTOMER_SRC
+    
+  - name: salesx
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: SALES_SRC
+    
+  - name: purchasex
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: PURCHASE_SRC
